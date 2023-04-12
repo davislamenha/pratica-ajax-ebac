@@ -45,7 +45,11 @@ $(document).ready(function () {
         const endereco = `${logradouro}, ${bairro}, ${cidade}-${estado}`;
 
         $('#endereco').val(endereco);
-
+      })
+      .catch(function (erro) {
+        alert('Ocorreu um erro, tente novamente mais tarde!');
+      })
+      .finally(function () {
         $('#btn-buscar-cep').find('span').addClass('d-none');
         $('#btn-buscar-cep').find('i').removeClass('d-none');
       });
