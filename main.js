@@ -54,4 +54,11 @@ $(document).ready(function () {
         $('#btn-buscar-cep').find('i').removeClass('d-none');
       });
   });
+
+  $('#formulario-pedido').submit(function (e) {
+    e.preventDefault();
+    if ($('#nome').val().length == 0) {
+      throw new Error('Digite seu nome');
+    }
+  });
 });
